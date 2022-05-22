@@ -4,7 +4,7 @@ def user_choice():
     # Lists of valid reponses
     text_ok = ["text", "t", "txt"]
     integer_ok = ["integer", "int", "#", "number"]
-    image_ok = ["image", "img", "pix", "picture", "pic"]
+    image_ok = ["image", "img", "p", "picture", "pic"]
 
     valid = False
     while not valid:
