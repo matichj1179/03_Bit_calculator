@@ -52,6 +52,10 @@ def user_choice():
             print("please choose a valid file type!")
             print()
 
+# Heading
+statement_generator("bit calculator for Intergers, Text & Images", "-")
+
+
 # Main routine goes here
 print()
 
