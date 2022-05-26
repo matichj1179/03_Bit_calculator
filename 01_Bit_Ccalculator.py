@@ -15,7 +15,9 @@ def statement_generator(text, decoration):
 
     return ""
 
+#checks user choice is 'interger', 'text' or 'image'
 def user_choice():
+
 
     # Lists of valid reponses
     text_ok = ["text", "t", "txt"]
@@ -52,8 +54,30 @@ def user_choice():
             print("please choose a valid file type!")
             print()
 
+# check input is a number more than a given value
+def num_check(question, low):
+
+    valid = False
+    while not valid:
+
+        error = "please enter a interger that is more than "
+        "(or eqaul to) {}".format(low)
+
+        try:
+            response = int(input(question))
+
+            if response >= low:
+                return response
+
+            else:
+                print(error)
+                print()
+
+        except ValueError:
+            print(error)
+
 # Heading
-statement_generator("bit calculator for Intergers, Text & Images", "-")
+statement_generator("bit calculator for Integers, Text & Images", "-")
 
 
 # Main routine goes here
@@ -62,12 +86,26 @@ print()
 keep_going = ""
 while keep_going == "":
 
+
     data_type = user_choice()
     print("you chose", data_type)
     print()
+    
+    # for intgers, ask for integer
+    if data_type =="integer":
+        var_integer = num_check("enter an integer: ", 0)
 
+    # for images, ask for width and height
+    # (must be an integer mare than / eqaul to 0)
+    elif data_type == "image":
+        image_width = num_check("image width? ", 1)
+        print() 
+        image_height = num_check("image height?", 1)
     
-    
+    # for text, ask for a string
+    else:
+        var_text = input(" enter some text: ")
+
     keep_going = input("Press <enter> to keep going or any key to quit")
 
     print()
