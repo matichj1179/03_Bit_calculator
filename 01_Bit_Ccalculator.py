@@ -172,5 +172,5 @@ while keep_going == "":
 
 
     print()
-    keep_going = input("Thanks for using the bit calculator")
+    keep_going = input("press <enter> to continue  or any key to quit ")
     print()
