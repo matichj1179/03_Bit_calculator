@@ -136,7 +136,7 @@ def int_bits():
      # output answer with working
     print()
     print("{} in binary is {}".format(var_integer, var_binary))
-    print("# of bits is {".format(num_bits))
+    print("# of bits is {}".format(num_bits))
     print()
 
     return ""
@@ -157,7 +157,7 @@ while keep_going == "":
     print()
     
     # for intgers, ask for integer
-    if data_type =="integer":
+    if data_type == "integer":
         int_bits()
 
     # for images, ask for width and height
