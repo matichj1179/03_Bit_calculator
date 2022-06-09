@@ -46,6 +46,8 @@ def image_bits():
 
     return ""
 
+
+
 # Main routine goes here
 image_bits()
     
